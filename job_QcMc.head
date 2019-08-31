@@ -1,0 +1,13 @@
+#include "$OFFLINEEVENTLOOPMGRROOT/share/OfflineEventLoopMgr_Option.txt"
+
+#include "$KKMCROOT/share/jobOptions_KKMC.txt"
+KKMC.CMSEnergy = 3.773;
+KKMC.BeamEnergySpread=0.00097;
+KKMC.GeneratePsi3770 = true;
+KKMC.ThresholdCut =  3.7393;
+KKMC.NumberOfEventPrinted=1;
+KKMC.ReadEcmsFromDB = 1;
+
+#include "$BESEVTGENROOT/share/BesEvtGen.txt"
+EvtDecay.userDecayTableName = "kspipivskpi_1.dec";
+EvtDecay.statDecays = true;
