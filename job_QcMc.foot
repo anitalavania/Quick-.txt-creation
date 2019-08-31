@@ -1,0 +1,15 @@
+BesRndmGenSvc.RndmSeed = 8000;
+
+#include "$BESSIMROOT/share/G4Svc_BesSim.txt"
+
+#include "$CALIBSVCROOT/share/calibConfig_sim.txt"
+
+RealizationSvc.RunIdList = {-11414,0,-13988,-14395,0,-14604,-20448,0,-23454};
+
+#include "$ROOTIOROOT/share/jobOptions_Digi2Root.txt"
+
+RootCnvSvc.digiRootOutputFile = "sim_kspipi_8000.rtraw";
+
+MessageSvc.OutputLevel  = 6;
+
+ApplicationMgr.EvtMax =10000;
