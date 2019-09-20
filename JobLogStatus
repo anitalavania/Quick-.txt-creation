@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#dpath=/home/anita/BESIII/UnitTests
+filenames=`ls sim_kspipi_*.txt.bosslog `
+
+
+for logfile in $filenames
+do
+
+#echo $logfile
+
+a=$(tail -2 $logfile)
+
+if echo "$a" | grep -q "ApplicationMgr       INFO Application Manager Terminated successfully";
+then
+   echo "OK: For file: $logfile"
+else
+   echo "UnMatch: For file:  $logfile"
+fi
+
+done
